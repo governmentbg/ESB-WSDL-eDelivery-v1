@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="https://edelivery.egov.bg/services/integration" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EDeliveryIntegrationService" targetNamespace="https://edelivery.egov.bg/services/integration">
+	<wsdl:documentation><wsdl:appinfo source="WMQI_APPINFO">
+	<MRWSDLAppInfo imported="true">
+		<generatedXSD location="EDeliveryIntegrationService_InlineSchema2.xsd"/>
+		<generatedXSD location="EDeliveryIntegrationService_InlineSchema1.xsd"/>
+		<generatedXSD location="EDeliveryIntegrationService_InlineSchema3.xsd"/>
+		<generatedXSD location="EDeliveryIntegrationService_InlineSchema4.xsd"/>
+		<generatedXSD location="EDeliveryIntegrationService_InlineSchema6.xsd"/>
+		<generatedXSD location="EDeliveryIntegrationService_InlineSchema5.xsd"/>
+		<binding hasEncoding="false" imported="true" name="BasicHttpBinding_IEDeliveryIntegrationService" originalBindingStyle="document"/>
+	</MRWSDLAppInfo>
+</wsdl:appinfo></wsdl:documentation>
+	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+			<xsd:include schemaLocation="EDeliveryIntegrationService_InlineSchema2.xsd"/>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="https://edelivery.egov.bg/services/integration" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+			<xsd:include schemaLocation="EDeliveryIntegrationService_InlineSchema1.xsd"/>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EDelivery.Common.DataContracts.ESubject" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/EDelivery.Common.DataContracts.ESubject">
+			<xsd:include schemaLocation="EDeliveryIntegrationService_InlineSchema3.xsd"/>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EDelivery.Common.Enums" xmlns:tns="http://schemas.datacontract.org/2004/07/EDelivery.Common.Enums">
+			<xsd:include schemaLocation="EDeliveryIntegrationService_InlineSchema4.xsd"/>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+			<xsd:include schemaLocation="EDeliveryIntegrationService_InlineSchema6.xsd"/>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EDelivery.Common.DataContracts" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/EDelivery.Common.DataContracts">
+			<xsd:include schemaLocation="EDeliveryIntegrationService_InlineSchema5.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="IEDeliveryIntegrationService_GetRegisteredInstitutions_InputMessage">
+		<wsdl:part name="parameters" element="tns:GetRegisteredInstitutions"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetRegisteredInstitutions_OutputMessage">
+		<wsdl:part name="parameters" element="tns:GetRegisteredInstitutionsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_SendElectronicDocument_InputMessage">
+		<wsdl:part name="parameters" element="tns:SendElectronicDocument"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_SendElectronicDocument_OutputMessage">
+		<wsdl:part name="parameters" element="tns:SendElectronicDocumentResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_SendElectronicDocumentOnBehalfOf_InputMessage">
+		<wsdl:part name="parameters" element="tns:SendElectronicDocumentOnBehalfOf"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_SendElectronicDocumentOnBehalfOf_OutputMessage">
+		<wsdl:part name="parameters" element="tns:SendElectronicDocumentOnBehalfOfResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_SendMessage_InputMessage">
+		<wsdl:part name="parameters" element="tns:SendMessage"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_SendMessage_OutputMessage">
+		<wsdl:part name="parameters" element="tns:SendMessageResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_SendMessageInReplyTo_InputMessage">
+		<wsdl:part name="parameters" element="tns:SendMessageInReplyTo"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_SendMessageInReplyTo_OutputMessage">
+		<wsdl:part name="parameters" element="tns:SendMessageInReplyToResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_SendMessageOnBehalfOf_InputMessage">
+		<wsdl:part name="parameters" element="tns:SendMessageOnBehalfOf"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_SendMessageOnBehalfOf_OutputMessage">
+		<wsdl:part name="parameters" element="tns:SendMessageOnBehalfOfResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentDocumentStatusByRegNum_InputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentDocumentStatusByRegNum"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentDocumentStatusByRegNum_OutputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentDocumentStatusByRegNumResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentDocumentContentByRegNum_InputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentDocumentContentByRegNum"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentDocumentContentByRegNum_OutputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentDocumentContentByRegNumResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentDocumentsContent_InputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentDocumentsContent"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentDocumentsContent_OutputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentDocumentsContentResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentDocumentContent_InputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentDocumentContent"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentDocumentContent_OutputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentDocumentContentResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentMessageStatus_InputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentMessageStatus"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentMessageStatus_OutputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentMessageStatusResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentMessagesList_InputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentMessagesList"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentMessagesList_OutputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentMessagesListResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentMessagesListPaged_InputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentMessagesListPaged"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSentMessagesListPaged_OutputMessage">
+		<wsdl:part name="parameters" element="tns:GetSentMessagesListPagedResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetReceivedMessagesList_InputMessage">
+		<wsdl:part name="parameters" element="tns:GetReceivedMessagesList"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetReceivedMessagesList_OutputMessage">
+		<wsdl:part name="parameters" element="tns:GetReceivedMessagesListResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetReceivedMessagesListPaged_InputMessage">
+		<wsdl:part name="parameters" element="tns:GetReceivedMessagesListPaged"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetReceivedMessagesListPaged_OutputMessage">
+		<wsdl:part name="parameters" element="tns:GetReceivedMessagesListPagedResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetReceivedMessageContent_InputMessage">
+		<wsdl:part name="parameters" element="tns:GetReceivedMessageContent"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetReceivedMessageContent_OutputMessage">
+		<wsdl:part name="parameters" element="tns:GetReceivedMessageContentResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_CheckPersonHasRegistration_InputMessage">
+		<wsdl:part name="parameters" element="tns:CheckPersonHasRegistration"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_CheckPersonHasRegistration_OutputMessage">
+		<wsdl:part name="parameters" element="tns:CheckPersonHasRegistrationResponse"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSubjectInfo_InputMessage">
+		<wsdl:part name="parameters" element="tns:GetSubjectInfo"/>
+	</wsdl:message>
+	<wsdl:message name="IEDeliveryIntegrationService_GetSubjectInfo_OutputMessage">
+		<wsdl:part name="parameters" element="tns:GetSubjectInfoResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="IEDeliveryIntegrationService">
+		<wsdl:operation name="GetRegisteredInstitutions">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_GetRegisteredInstitutions_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetRegisteredInstitutions"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_GetRegisteredInstitutions_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetRegisteredInstitutionsResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SendElectronicDocument">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_SendElectronicDocument_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendElectronicDocument"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_SendElectronicDocument_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendElectronicDocumentResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SendElectronicDocumentOnBehalfOf">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_SendElectronicDocumentOnBehalfOf_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendElectronicDocumentOnBehalfOf"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_SendElectronicDocumentOnBehalfOf_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendElectronicDocumentOnBehalfOfResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SendMessage">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_SendMessage_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendMessage"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_SendMessage_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendMessageResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SendMessageInReplyTo">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_SendMessageInReplyTo_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendMessageInReplyTo"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_SendMessageInReplyTo_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendMessageInReplyToResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="SendMessageOnBehalfOf">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_SendMessageOnBehalfOf_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendMessageOnBehalfOf"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_SendMessageOnBehalfOf_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendMessageOnBehalfOfResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentDocumentStatusByRegNum">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_GetSentDocumentStatusByRegNum_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentDocumentStatusByRegNum"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_GetSentDocumentStatusByRegNum_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentDocumentStatusByRegNumResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentDocumentContentByRegNum">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_GetSentDocumentContentByRegNum_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentDocumentContentByRegNum"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_GetSentDocumentContentByRegNum_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentDocumentContentByRegNumResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentDocumentsContent">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_GetSentDocumentsContent_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentDocumentsContent"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_GetSentDocumentsContent_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentDocumentsContentResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentDocumentContent">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_GetSentDocumentContent_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentDocumentContent"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_GetSentDocumentContent_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentDocumentContentResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentMessageStatus">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_GetSentMessageStatus_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentMessageStatus"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_GetSentMessageStatus_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentMessageStatusResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentMessagesList">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_GetSentMessagesList_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentMessagesList"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_GetSentMessagesList_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentMessagesListResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentMessagesListPaged">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_GetSentMessagesListPaged_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentMessagesListPaged"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_GetSentMessagesListPaged_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentMessagesListPagedResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetReceivedMessagesList">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_GetReceivedMessagesList_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetReceivedMessagesList"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_GetReceivedMessagesList_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetReceivedMessagesListResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetReceivedMessagesListPaged">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_GetReceivedMessagesListPaged_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetReceivedMessagesListPaged"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_GetReceivedMessagesListPaged_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetReceivedMessagesListPagedResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetReceivedMessageContent">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_GetReceivedMessageContent_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetReceivedMessageContent"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_GetReceivedMessageContent_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetReceivedMessageContentResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="CheckPersonHasRegistration">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_CheckPersonHasRegistration_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/CheckPersonHasRegistration"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_CheckPersonHasRegistration_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/CheckPersonHasRegistrationResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetSubjectInfo">
+			<wsdl:input message="tns:IEDeliveryIntegrationService_GetSubjectInfo_InputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSubjectInfo"/>
+			<wsdl:output message="tns:IEDeliveryIntegrationService_GetSubjectInfo_OutputMessage" wsaw:Action="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSubjectInfoResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="BasicHttpBinding_IEDeliveryIntegrationService" type="tns:IEDeliveryIntegrationService">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsp:PolicyReference URI="#BasicHttpBinding_IEDeliveryIntegrationService_policy"/>
+		<wsdl:operation name="GetRegisteredInstitutions">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetRegisteredInstitutions" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SendElectronicDocument">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendElectronicDocument" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SendElectronicDocumentOnBehalfOf">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendElectronicDocumentOnBehalfOf" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SendMessage">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendMessage" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SendMessageInReplyTo">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendMessageInReplyTo" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SendMessageOnBehalfOf">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/SendMessageOnBehalfOf" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentDocumentStatusByRegNum">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentDocumentStatusByRegNum" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentDocumentContentByRegNum">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentDocumentContentByRegNum" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentDocumentsContent">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentDocumentsContent" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentDocumentContent">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentDocumentContent" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentMessageStatus">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentMessageStatus" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentMessagesList">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentMessagesList" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetSentMessagesListPaged">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSentMessagesListPaged" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetReceivedMessagesList">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetReceivedMessagesList" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetReceivedMessagesListPaged">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetReceivedMessagesListPaged" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetReceivedMessageContent">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetReceivedMessageContent" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="CheckPersonHasRegistration">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/CheckPersonHasRegistration" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetSubjectInfo">
+			<soap:operation soapAction="https://edelivery.egov.bg/services/integration/IEDeliveryIntegrationService/GetSubjectInfo" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="EDeliveryIntegrationService">
+		<wsdl:port name="BasicHttpBinding_IEDeliveryIntegrationService" binding="tns:BasicHttpBinding_IEDeliveryIntegrationService">
+			<soap:address location="https://edelivery-test.egov.bg/Services/EDeliveryIntegrationService.svc"/>
+		</wsdl:port>
+	</wsdl:service>
+	<wsp:Policy wsu:Id="BasicHttpBinding_IEDeliveryIntegrationService_policy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"/>
+				<sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:TransportToken>
+							<wsp:Policy>
+								<sp:HttpsToken RequireClientCertificate="false"/>
+							</wsp:Policy>
+						</sp:TransportToken>
+						<sp:AlgorithmSuite>
+							<wsp:Policy>
+								<sp:Basic256/>
+							</wsp:Policy>
+						</sp:AlgorithmSuite>
+						<sp:Layout>
+							<wsp:Policy>
+								<sp:Lax/>
+							</wsp:Policy>
+						</sp:Layout>
+						<sp:IncludeTimestamp/>
+					</wsp:Policy>
+				</sp:TransportBinding>
+				<sp:EndorsingSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+							<wsp:Policy>
+								<sp:WssX509V3Token10/>
+							</wsp:Policy>
+						</sp:X509Token>
+					</wsp:Policy>
+				</sp:EndorsingSupportingTokens>
+				<sp:Wss10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:MustSupportRefKeyIdentifier/>
+						<sp:MustSupportRefIssuerSerial/>
+					</wsp:Policy>
+				</sp:Wss10>
+			</wsp:All>
+		</wsp:ExactlyOne>
+	</wsp:Policy>
+</wsdl:definitions>
